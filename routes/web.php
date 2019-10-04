@@ -26,3 +26,18 @@ Route::get('/', function () {
  Route::get('/curso/programa', 'CursoController@getProgramas');
  Route::post('/curso/store', 'CursoController@store');
  Route::post('/curso/storecreate', 'CursoController@storecreate');
+
+ //Rutas del Segundo Taller Corte 2
+ Route::get('/restaurante', 'RestauranteController@index');
+ Route::post('/restaurante/create', 'RestauranteController@storecreate');
+ Route::post('/restaurante/createmany', 'RestauranteController@storecreatemany');
+
+ Route::get('/cafeteria', 'ReseñaController@index');
+ Route::post('/cafeteria/create', 'CafeteriaController@storecreate');
+ Route::post('/cafeteria/createmany', 'CafeteriaController@storecreatemany');
+
+ Route::get('/hotel', 'ReseñaController@index');
+ Route::post('/hotel/create', 'HotelController@storecreate');
+ Route::post('/hotel/createmany', 'HotelController@storecreatemany');
+
+ Route::get('/resena', 'ReseñaController@index');

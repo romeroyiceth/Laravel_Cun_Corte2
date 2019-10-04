@@ -15,5 +15,8 @@ class DatabaseSeeder extends Seeder
           $this->call(AutoSeeder::class);
           $this->call(ProgramadorSeeder::class);
           $this->call(CursoSeeder::class);
+          $this->call(HotelSeeder::class);
+          $this->call(CafeteriaSeeder::class);
+          $this->call(RestauranteSeeder::class);
     }
 }
