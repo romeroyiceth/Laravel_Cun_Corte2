@@ -18,5 +18,10 @@ class DatabaseSeeder extends Seeder
           $this->call(HotelSeeder::class);
           $this->call(CafeteriaSeeder::class);
           $this->call(RestauranteSeeder::class);
+          $this->call(ContratoSeeder::class);
+          $this->call(GeneroSeeder::class);
+          $this->call(AutorSeeder::class);
+          $this->call(AdministradorSeeder::class);
+          $this->call(UsuarioSeeder::class);
     }
 }

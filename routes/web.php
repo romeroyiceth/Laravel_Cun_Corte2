@@ -27,6 +27,11 @@ Route::get('/', function () {
  Route::post('/curso/store', 'CursoController@store');
  Route::post('/curso/storecreate', 'CursoController@storecreate');
 
+ //ejemplo de eager  y lazy 
+
+Route::get('/curso/eager', 'CursoController@eager');
+Route::get('/curso/lazy', 'CursoController@lazy');
+
  //Rutas del Segundo Taller Corte 2
  Route::get('/restaurante', 'RestauranteController@index');
  Route::post('/restaurante/create', 'RestauranteController@storecreate');
@@ -41,3 +46,34 @@ Route::get('/', function () {
  Route::post('/hotel/createmany', 'HotelController@storecreatemany');
 
  Route::get('/resena', 'ReseñaController@index');
+
+ //Routas del parcial del segundo corte
+
+ //ONE TO  ONE
+ Route::get('/contrato', 'ContratoController@index');
+ Route::post('/contrato/guardar', 'ContratoController@store');
+ Route::post('/contrato/actualizar', 'ContratoController@update');
+
+
+ //ONE TO MANY
+ Route::get('/genero', 'GeneroController@index');
+ Route::post('/genero/guardar', 'GeneroController@store');
+ Route::post('/genero/actualizar', 'GeneroController@update');
+
+ //MANY TO MANY 
+ Route::get('/autor', 'AutorController@index');
+ Route::post('/autor/guardar', 'AutorController@store');
+ Route::post('/autor/actualizar', 'AutorController@update');
+
+
+// POLIMORFICAS
+Route::get('/administrador', 'AdministradorController@index');
+Route::post('/administrador/guardar', 'AdministradorController@store');
+Route::post('/administrador/actualizar', 'AdministradorController@update');
+Route::post('/administrador/eliminar', 'AdministradorController@destroy');
+
+Route::get('/usuario', 'ImagenController@index');
+Route::post('/usuario/guardar', 'UsuarioController@store');
+Route::post('/usuario/actualizar', 'UsuarioController@update');
+
+Route::get('/imagen', 'ImagenController@index');

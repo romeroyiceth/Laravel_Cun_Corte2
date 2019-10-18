@@ -23,7 +23,23 @@ class CursoController extends Controller
         $cursos=Curso::with('programas')->get();
         return $cursos;
     }
+     
+    public function eager(){
+        $cursos= Curso::with('clases.programas')->get();
+        return $cursos;
+    }
+     public function lazy(){
+        
+        $cursos= Curso::all();
+        foreach($cursos as $curso){
+            {
+                $curso->clases;
+            }
 
+     }
+     
+     return $cursos;
+    }
     /**
      * Show the form for creating a new resource.
      *
